@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 const HeaderContainer = styled.div`
   display: flex;
@@ -18,16 +19,23 @@ const ContactInfo = styled.div`
   text-align: right;
 `;
 
-const Header = () => (
+const Header = ({ supportContact }) => (
   <HeaderContainer>
     <Title>Account Overview</Title>
     <ContactInfo>
       <div>Your Feefo Support Contact</div>
-      <div>Support</div>
-      <div>support@feefo.com</div>
+      <div>{supportContact.name}</div>
+      <div>{supportContact.email}</div>
       <div>020 3362 4208</div>
     </ContactInfo>
   </HeaderContainer>
 );
+
+Header.propTypes = {
+  supportContact: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    email: PropTypes.string.isRequired
+  }).isRequired
+};
 
 export default Header;
