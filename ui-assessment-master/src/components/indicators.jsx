@@ -28,7 +28,7 @@ const IndicatorTitle = styled.div`
 const IndicatorValue = styled.div`
   
   font-size: 25px;
-  font-weight: bold;
+  font-weight: 999;
   color: #22ab55;
 `;
 

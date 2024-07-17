@@ -2,12 +2,19 @@ import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import Indicators from './indicators';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faInfoCircle, faUpload } from '@fortawesome/free-solid-svg-icons';
+
 
 const CardContainer = styled.div`
   background-color: #fff;
-  border: 1px solid #ddd;
+  border: 1px #ddd;
   margin-top: 20px;
   border-radius: 10px;
+  text-align: left;
+`;
+const Content = styled.div`
+    padding:20px;
 `;
 
 const Title = styled.h2`
@@ -15,10 +22,23 @@ const Title = styled.h2`
   color: #333;
 `;
 
+const InfoContent = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+`;
+
 const SalesCard = ({ salesOverview }) => (
   <CardContainer>
-    <Title>Sales</Title>
-    <p>You had {salesOverview.uploads} uploads and {salesOverview.linesSaved} lines added.</p>
+    <Content>
+        <InfoContent>
+            <Title> <FontAwesomeIcon icon={faUpload} color='#159dcf'/> Sales</Title>
+            <FontAwesomeIcon icon={faInfoCircle} color='#ddd'/>
+        </InfoContent>
+        <p>You had <strong>{salesOverview.uploads} uploads</strong> and <strong>{salesOverview.linesSaved}</strong> lines added.</p>
+
+    </Content>
+
     <Indicators salesOverview={salesOverview} />
   </CardContainer>
 );
