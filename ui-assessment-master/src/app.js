@@ -1,5 +1,6 @@
-import './app.css';
+import React from 'react';
 import AccountOverview from './account-overview';
+import './app.css';
 
 function App() {
   const accountOverviewStub = {
@@ -14,12 +15,11 @@ function App() {
       linesSaved: 4,
       lastUploadDate: 1605001226079,
     }
-  }
-
+  };
 
   return (
     <div className="App">
-      <AccountOverview data={accountOverviewStub}/>
+      <AccountOverview data={accountOverviewStub} />
     </div>
   );
 }

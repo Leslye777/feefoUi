@@ -7,7 +7,6 @@ const HeaderContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  background-color: #f8f9fa;
 `;
 
 const Title = styled.h1`
@@ -17,13 +16,15 @@ const Title = styled.h1`
 
 const ContactInfo = styled.div`
   text-align: right;
+  font-weight: bold;
+  color: grey;
 `;
 
 const Header = ({ supportContact }) => (
   <HeaderContainer>
     <Title>Account Overview</Title>
     <ContactInfo>
-      <div>Your Feefo Support Contact</div>
+      <div>YOUR FEEFO SUPPORT CONTACT</div>
       <div>{supportContact.name}</div>
       <div>{supportContact.email}</div>
       <div>020 3362 4208</div>
