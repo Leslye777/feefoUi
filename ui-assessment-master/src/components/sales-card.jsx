@@ -9,12 +9,14 @@ import { faInfoCircle, faUpload } from '@fortawesome/free-solid-svg-icons';
 const CardContainer = styled.div`
   background-color: #fff;
   border: 1px #ddd;
-  margin-top: 20px;
   border-radius: 10px;
-  text-align: left;
+  text-align: center;
+
 `;
 const Content = styled.div`
-    padding:20px;
+    padding:10px 20px;
+      text-align: left;
+
 `;
 
 const Title = styled.h2`
@@ -32,7 +34,7 @@ const SalesCard = ({ salesOverview }) => (
   <CardContainer>
     <Content>
         <InfoContent>
-            <Title> <FontAwesomeIcon icon={faUpload} color='#159dcf'/> Sales</Title>
+            <Title> <FontAwesomeIcon icon={faUpload} color='#159dcf'/> &nbsp; Sales</Title>
             <FontAwesomeIcon icon={faInfoCircle} color='#ddd'/>
         </InfoContent>
         <p>You had <strong>{salesOverview.uploads} uploads</strong> and <strong>{salesOverview.linesSaved}</strong> lines added.</p>
