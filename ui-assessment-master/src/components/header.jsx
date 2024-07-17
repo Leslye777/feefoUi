@@ -13,7 +13,6 @@ const HeaderContainer = styled.div`
 const Title = styled.h1`
   font-size: 25px;
   color: #6B6B6B;
-
 `;
 
 const SupportBoard = styled.div`
